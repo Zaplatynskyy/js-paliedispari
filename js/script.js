@@ -1,7 +1,23 @@
 // Palidroma Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma
 
+const parola = prompt('Inserisci una parola');
+if(palindroma(parola)) {
+    console.log('La parola inserita "' + parola + '" è palindroma');
+} else {
+    console.log('La parola inserita "' + parola + '" non è palindroma');
+}
 
+function palindroma(word) {
+    let newWord = '';
+    for(let i = word.length - 1; i >= 0; i--) {
+        newWord += word[i];
+    }
 
+    if(word == newWord) {
+        return true;
+    }
+    return false;
+}
 
 
 // Pari e Dispari L’utente sceglie pari o dispari e inserisce un numero da 1 a 5. Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione). Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
@@ -19,7 +35,7 @@ console.log('La somma dei due numeri (' + sum + ') è', pariDispari(sum));
 
 if(pariDispari(sum) == scelta){
     console.log('Hai vinto');
-}else {
+} else {
     console.log('Hai perso');
 }
 
